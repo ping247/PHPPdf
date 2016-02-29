@@ -66,6 +66,10 @@ class Image extends Node
         {
             $gc = $node->getGraphicsContext();
             
+            if (!$gs) {
+              return;
+            }
+            
             $alpha = $node->getAlpha();
             $isAlphaSet = $alpha != 1 && $alpha !== null;
             $keepRatio = $node->getAttribute('keep-ratio');

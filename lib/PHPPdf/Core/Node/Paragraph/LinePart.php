@@ -77,6 +77,10 @@ class LinePart implements Drawable
     {
         $tasks->insert(new DrawingTask(function(Text $text, $point, $words, $width, $document, $linePartWordSpacing, Point $translation) {
             $gc = $text->getGraphicsContext();
+            if (!$gs) {
+              return;
+            }
+            
             $gc->saveGS();
             $fontSize = $text->getFontSizeRecursively();
             

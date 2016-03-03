@@ -66,7 +66,7 @@ class Image extends Node
         {
             $gc = $node->getGraphicsContext();
             
-            if (!$gs) {
+            if (!$gc) {
               return;
             }
             

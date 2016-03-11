@@ -71,6 +71,10 @@ abstract class ComplexAttribute
         $alpha = $node->getAlpha();
         
         $graphicsContext = $node->getGraphicsContext();
+     
+        if (!graphicsContext) {
+          return;
+        }
         
         $isAlphaSet = $alpha != 1 && $alpha !== null;
         

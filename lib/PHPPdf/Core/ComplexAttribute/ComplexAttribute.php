@@ -72,7 +72,7 @@ abstract class ComplexAttribute
         
         $graphicsContext = $node->getGraphicsContext();
      
-        if (!graphicsContext) {
+        if (!$graphicsContext) {
           return;
         }
         

@@ -70,7 +70,7 @@ abstract class ComplexAttribute
         $color = $document->getColorFromPalette($this->getColor());
         $alpha = $node->getAlpha();
         
-        $graphicsContext = $node->getGraphicsContext();
+        $graphicsContext = $node->getGraphicsContext($document);
      
         $isAlphaSet = $alpha != 1 && $alpha !== null;
         

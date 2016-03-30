@@ -62,9 +62,9 @@ class Image extends Node
     protected function doDraw(Document $document, DrawingTaskHeap $tasks)
     {
         $sourceImage = $this->createSource($document);
-        $callback = function(Node $node, $sourceImage)
+        $callback = function(Node $node, $sourceImage, $document)
         {
-            $gc = $node->getGraphicsContext();
+            $gc = $node->getGraphicsContext($document);
                         
             $alpha = $node->getAlpha();
             $isAlphaSet = $alpha != 1 && $alpha !== null;
@@ -121,7 +121,7 @@ class Image extends Node
             }
         };
         
-        $drawingTask = new DrawingTask($callback, array($this, $sourceImage));
+        $drawingTask = new DrawingTask($callback, array($this, $sourceImage, $document));
 
         $tasks->insert($drawingTask);
     }

@@ -287,6 +287,10 @@ class Page extends Container
      */
     public function getGraphicsContext($document)
     {
+        if (!$this->graphicsContext && isset($document)) {
+            $this->prepareGraphicsContext($document);
+        }
+      
         return $this->graphicsContext;
     }
 

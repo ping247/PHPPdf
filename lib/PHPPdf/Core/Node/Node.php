@@ -1649,9 +1649,9 @@ abstract class Node implements Drawable, NodeAware, \ArrayAccess, \Serializable
     /**
      * @return \PHPPdf\Core\Engine\GraphicsContext
      */
-    public function getGraphicsContext()
+    public function getGraphicsContext($document)
     {
-        return $this->getPage()->getGraphicsContext();
+        return $this->getPage()->getGraphicsContext($document);
     }
 
     public function getPlaceholder($name)

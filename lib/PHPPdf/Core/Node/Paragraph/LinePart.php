@@ -76,7 +76,7 @@ class LinePart implements Drawable
     public function collectOrderedDrawingTasks(Document $document, DrawingTaskHeap $tasks)
     {
         $tasks->insert(new DrawingTask(function(Text $text, $point, $words, $width, $document, $linePartWordSpacing, Point $translation) {
-            $gc = $text->getGraphicsContext();
+            $gc = $text->getGraphicsContext($document);
                        
             $gc->saveGS();
             $fontSize = $text->getFontSizeRecursively();

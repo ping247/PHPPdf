@@ -285,7 +285,7 @@ class Page extends Container
     /**
      * @return GraphicsContext
      */
-    public function getGraphicsContext()
+    public function getGraphicsContext($document)
     {
         return $this->graphicsContext;
     }

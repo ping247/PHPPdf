@@ -65,11 +65,7 @@ class Image extends Node
         $callback = function(Node $node, $sourceImage)
         {
             $gc = $node->getGraphicsContext();
-            
-            if (!$gc) {
-              return;
-            }
-            
+                        
             $alpha = $node->getAlpha();
             $isAlphaSet = $alpha != 1 && $alpha !== null;
             $keepRatio = $node->getAttribute('keep-ratio');

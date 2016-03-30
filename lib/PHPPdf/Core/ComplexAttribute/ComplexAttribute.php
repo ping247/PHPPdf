@@ -72,10 +72,6 @@ abstract class ComplexAttribute
         
         $graphicsContext = $node->getGraphicsContext();
      
-        if (!$graphicsContext) {
-          return;
-        }
-        
         $isAlphaSet = $alpha != 1 && $alpha !== null;
         
         $rotationNode = $node->getAncestorWithRotation();

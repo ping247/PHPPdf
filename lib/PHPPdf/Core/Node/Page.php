@@ -241,7 +241,7 @@ class Page extends Container
     {
         $this->prepareGraphicsContext($document);
 
-        $document->attachGraphicsContext($this->getGraphicsContext());
+        $document->attachGraphicsContext($this->getGraphicsContext($document));
 
         if(!$this->preparedTemplate)
         {
@@ -329,7 +329,7 @@ class Page extends Container
 
         if($this->graphicsContext)
         {
-            $graphicsContext = $this->getGraphicsContext();
+            $graphicsContext = $this->getGraphicsContext(null);
             $clonedGraphicsContext = $graphicsContext->copy();
             $copy->graphicsContext = $clonedGraphicsContext;
         }

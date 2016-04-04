@@ -125,7 +125,7 @@ class BasicList extends Container
         parent::doDraw($document, $tasks);
         
         $tasks->insert(new DrawingTask(function(Node $node, Document $document) {
-            $gc = $node->getGraphicsContext();
+            $gc = $node->getGraphicsContext($document);
 
             $enumerationStrategy = $node->getEnumerationStrategy();
             $enumerationStrategy->setIndex(0);

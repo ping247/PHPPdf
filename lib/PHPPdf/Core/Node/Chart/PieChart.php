@@ -68,7 +68,7 @@ class PieChart extends Circle
         parent::doDraw($document, $tasks);
         
         $callback = function(PieChart $node, Document $document, Point $point){
-            $gc = $node->getGraphicsContext();
+            $gc = $node->getGraphicsContext( $document);
             
             $values = $node->getAttribute('chart-values');
             $colors = $node->getAttribute('chart-colors');

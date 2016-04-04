@@ -1147,7 +1147,7 @@ abstract class Node implements Drawable, NodeAware, \ArrayAccess, \Serializable
         foreach($this->behaviours as $behaviour)
         {
             $callback = function($behaviour, $node){
-                $behaviour->attach($node->getGraphicsContext(), $node);
+                $behaviour->attach($node->getGraphicsContext($document), $node);
             };
             $args = array($behaviour, $this);
             $tasks->insert(new DrawingTask($callback, $args));
@@ -1212,7 +1212,7 @@ abstract class Node implements Drawable, NodeAware, \ArrayAccess, \Serializable
     protected function createDumpTask()
     {
         $task = new DrawingTask(function($node){
-            $gc = $node->getGraphicsContext();
+            $gc = $node->getGraphicsContext(null);
             $firstPoint = $node->getFirstPoint();
             $diagonalPoint = $node->getDiagonalPoint();
             

@@ -130,7 +130,7 @@ class Barcode extends Node
     {
         $callback = function(Barcode $node, Document $document){
             $barcode = $node->getBarcode($document);
-            $gc = $node->getGraphicsContext();
+            $gc = $node->getGraphicsContext($document);
             $gc->drawBarcode($node->getFirstPoint()->getX(), $node->getFirstPoint()->getY(), $barcode);
         };
         

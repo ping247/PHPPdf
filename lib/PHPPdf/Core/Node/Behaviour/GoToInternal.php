@@ -38,6 +38,6 @@ class GoToInternal extends Behaviour
         
         $destinationNodeFirstPoint = self::getFirstPointOf($destinationNode);
         
-        $gc->goToAction($destinationNode->getGraphicsContext(), $firstPoint->getX(), $firstPoint->getY(), $diagonalPoint->getX(), $diagonalPoint->getY(), $destinationNodeFirstPoint->getY());
+        $gc->goToAction($destinationNode->getGraphicsContext(null), $firstPoint->getX(), $firstPoint->getY(), $diagonalPoint->getX(), $diagonalPoint->getY(), $destinationNodeFirstPoint->getY());
     }
 }

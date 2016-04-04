@@ -36,7 +36,7 @@ class PageCollection extends Container
         throw new LogicException('PageCollection can\'t be broken.');
     }
     
-    public function getGraphicsContext()
+    public function getGraphicsContext($document)
     {
         return null;
     }

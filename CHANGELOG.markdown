@@ -1,13 +1,17 @@
 CHANGELOG
 =========
 
-* 1.3.0-DEV (???)
+* 1.2.11 (???)
 
-  * [#47] support for max-height and max-width attributes
-  * [#79] enhancements for page-size attribute support
+  * (nothing)
 
-* 1.2.9 (???)
+* 1.2.10 (2016-08-15)
 
+  * [#114] Fix failures on nodes initialization in big documents
+
+* 1.2.9 (2016-03-06)
+
+  * [#95] relaxed ZF components versions
   * [#106] More relevant exception messages for colors, fonts and pdf files
 
 * 1.2.8 (2016-01-24)
